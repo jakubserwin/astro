@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon'
+
 export interface Props {
 	title: string;
 	body: string;
@@ -9,6 +11,7 @@ const { href, title, body } = Astro.props;
 ---
 
 <li class="link-card">
+	<Icon pack="mdi" name="account" />
 	<a href={href}>
 		<h2>
 			{title}
