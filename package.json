@@ -7,7 +7,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "prettierTMP": "prettier -w --plugin-search-dir=. ."
+    "prettierTMP": "prettier -w --plugin-search-dir=. .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@astrojs/tailwind": "^3.0.1",
@@ -23,6 +24,12 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-tailwindcss": "^3.9.0",
+    "husky": "^8.0.3",
     "prettier-plugin-astro": "^0.8.0"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,astro}": [
+      "npx eslint --fix 'src/**/*.{ts,astro}'"
+    ]
   }
 }
