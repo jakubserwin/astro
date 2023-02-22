@@ -4,13 +4,23 @@
     "browser": true,
     "node": true
   },
-  // "plugins": ["@typescript-eslint"],
+  "extends": ["airbnb-base", "airbnb-typescript"],
+  "plugins": ["@typescript-eslint", "unused-imports", "simple-import-sort"],
   "parserOptions": {
-    "sourceType": "module",
-    "ecmaVersion": 2020
+    "project": "./tsconfig.json"
   },
   "rules": {
-    "@typescript-eslint/explicit-function-return-type": ["error"],
+    "react/jsx-filename-extension": [0],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never"
+      }
+    ],
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/member-delimiter-style": [
       "warn",
       {
@@ -24,12 +34,22 @@
         }
       }
     ],
-    "semi": ["error", "never"],
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "@typescript-eslint/semi": "off",
+    "@typescript-eslint/explicit-function-return-type": ["error"],
+    "@typescript-eslint/type-annotation-spacing": 2,
+    "object-property-newline": [
+      2,
+      {
+        "allowAllPropertiesOnSameLine": false
+      }
+    ],
     "@typescript-eslint/member-ordering": [
-      "warn",
+      "error",
       {
         "interfaces": {
-          "optionalityOrder": "optional-first"
+          "optionalityOrder": "required-first"
         }
       }
     ]
@@ -37,12 +57,29 @@
   "overrides": [
     {
       "files": ["*.astro"],
-      "plugins": ["tailwindcss"],
-      "extends": ["plugin:tailwindcss/recommended", "plugin:astro/recommended"],
+      "plugins": [
+        "@typescript-eslint",
+        "unused-imports",
+        "simple-import-sort",
+        "tailwindcss"
+      ],
+      "extends": [
+        "plugin:tailwindcss/recommended",
+        "plugin:astro/recommended",
+        "airbnb-base",
+        "airbnb-typescript"
+      ],
       "parser": "astro-eslint-parser",
       "parserOptions": {
+        "parser": "@typescript-eslint/parser",
         "extraFileExtensions": [".astro"],
         "project": "./tsconfig.json"
+      },
+      "rules": {
+        "import/no-unresolved": [0],
+        "@typescript-eslint/semi": "off",
+        "astro/semi": [2, "never"],
+        "react/jsx-filename-extension": [0]
       }
     }
   ]

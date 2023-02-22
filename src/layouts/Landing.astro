@@ -1,8 +1,12 @@
 ---
 import HeaderComponent from '@components/HeaderComponent.astro'
 import ServiceCardComponent from '@components/ServiceCardComponent.astro'
-
 import { services } from '@mocks'
+import type { Service } from '@types'
+
+export interface Props {
+  service: Service;
+}
 ---
 
 <HeaderComponent />
@@ -24,7 +28,7 @@ import { services } from '@mocks'
   </button>
   <div class="flex gap-10">
     {
-      services.map(service => (
+      services.map((service) => (
         <ServiceCardComponent service={service} />
       ))
     }

@@ -1,11 +1,11 @@
 export interface AstroIcon {
-  pack?: string;
   name: string;
+  pack?: string;
 }
 
 export interface Service {
   id: number;
   icon: AstroIcon;
-  title: string,
-  label: string,
+  title: string;
+  label: string;
 }
