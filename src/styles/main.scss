@@ -1,0 +1,46 @@
+@use "index" as *;
+@use "animations" as *;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  background: var(--background);
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+ul {
+  list-style: none;
+}
+
+.element-hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.container {
+  width: 100%;
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+section {
+  padding: ($gap-size-main-desktop) 0;
+}
+
+.hide {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+}
