@@ -1,0 +1,36 @@
+---
+import { Icon } from 'astro-icon'
+import type { Service } from '@types'
+
+export interface Props {
+  service: Service
+}
+
+const test = () => {
+  return ''
+}
+
+const { service } = Astro.props
+---
+
+<div class='service-card flex flex-col items-center border border-red-500'>
+  <Icon name={service.icon.name} />
+  <h3 class='mb-2 mt-3 text-xl font-medium'>
+    {service.title}
+  </h3>
+  <p class='text-center font-light'>
+    {service.label}
+  </p>
+</div>
+
+<style lang='css'>
+  .service-card {
+    max-width: 280px;
+  }
+
+  [astro-icon] {
+    width: 48px;
+    height: 48px;
+    fill: blue;
+  }
+</style>

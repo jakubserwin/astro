@@ -1,13 +1,32 @@
 ---
 import HeaderComponent from '@components/HeaderComponent.astro'
+import ServiceCardComponent from '@components/ServiceCardComponent.astro'
 
-// export interface Props {
-//   title: string;
-//   body: string;
-//   href: string;
-// }
-
-// const { href, title, body } = Astro.props
+import { services } from '@mocks'
 ---
 
 <HeaderComponent />
+<div>
+  <p>Hello</p>
+  <h1>
+    I’m Jakub Serwin,<span>Frontend Developer</span>
+  </h1>
+  <h2>
+    I specialize in designing and creating scalable, beautiful websites to help
+    individuals and businesses grow.
+  </h2>
+  <button
+    class='landing-page__button'
+    data-target='#projects'
+    @click='polyfillScroll'
+  >
+    See My Work
+  </button>
+  <div class="flex gap-10">
+    {
+      services.map(service => (
+        <ServiceCardComponent service={service} />
+      ))
+    }
+  </div>
+</div>

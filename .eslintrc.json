@@ -1,0 +1,49 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  // "plugins": ["@typescript-eslint"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2020
+  },
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": ["error"],
+    "@typescript-eslint/member-delimiter-style": [
+      "warn",
+      {
+        "multiline": {
+          "delimiter": "semi",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "semi",
+          "requireLast": false
+        }
+      }
+    ],
+    "semi": ["error", "never"],
+    "@typescript-eslint/member-ordering": [
+      "warn",
+      {
+        "interfaces": {
+          "optionalityOrder": "optional-first"
+        }
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.astro"],
+      "plugins": ["tailwindcss"],
+      "extends": ["plugin:tailwindcss/recommended", "plugin:astro/recommended"],
+      "parser": "astro-eslint-parser",
+      "parserOptions": {
+        "extraFileExtensions": [".astro"],
+        "project": "./tsconfig.json"
+      }
+    }
+  ]
+}
