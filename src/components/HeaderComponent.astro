@@ -1,15 +1,20 @@
 ---
-import { Icon } from 'astro-icon'
-
-// export interface Props {
-//   title: string;
-//   body: string;
-//   href: string;
-// }
-
-// const { href, title, body } = Astro.props
+// import { Icon } from 'astro-icon'
 ---
 
-<h1>
-  HEADER
-</h1>
+<header class='flex items-center justify-between py-4'>
+  <a class="text-xl font-medium">Jakub Serwin</a>
+  <nav>
+    <ul class='flex gap-4 font-light'>
+      <li>
+        <a>Home</a>
+      </li>
+      <li>
+        <a> Projects</a>
+      </li>
+      <li>
+        <a> Contact</a>
+      </li>
+    </ul>
+  </nav>
+</header>
