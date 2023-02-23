@@ -79,7 +79,8 @@
         "import/no-unresolved": [0],
         "@typescript-eslint/semi": "off",
         "astro/semi": [2, "never"],
-        "react/jsx-filename-extension": [0]
+        "react/jsx-filename-extension": [0],
+        "import/prefer-default-export": [0]
       }
     }
   ]

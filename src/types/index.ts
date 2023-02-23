@@ -9,3 +9,9 @@ export interface Service {
   title: string;
   label: string;
 }
+
+export interface StaticPath {
+  params: {
+    [key in string]: string
+  };
+}
