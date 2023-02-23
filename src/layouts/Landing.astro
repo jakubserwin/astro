@@ -1,15 +1,17 @@
 ---
 import HeaderComponent from '@components/HeaderComponent.astro'
+import { t } from 'i18next'
 ---
 
 <div class='h-screen bg-[url("/bg.jpg")] bg-cover bg-no-repeat'>
   <div class='container mx-auto flex h-full flex-col'>
     <HeaderComponent />
+    <h1>{t('hello')}</h1>
     <div class='grid flex-1 place-content-center text-center text-white'>
       <h1 class='text-6xl'>Enhance Your Business</h1>
       <h2 class='mt-4 mb-12 max-w-4xl text-2xl'>
-        I specialize in crafting stunning and scalable web and mobile solutions to
-        help individuals and businesses grow.
+        I specialize in crafting stunning and scalable web and mobile solutions
+        to help individuals and businesses grow.
       </h2>
       <button
         class='landing-page__button'
