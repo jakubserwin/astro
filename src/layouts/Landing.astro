@@ -1,36 +1,23 @@
 ---
 import HeaderComponent from '@components/HeaderComponent.astro'
-import ServiceCardComponent from '@components/ServiceCardComponent.astro'
-import { services } from '@mocks'
-import type { Service } from '@types'
-
-export interface Props {
-  service: Service;
-}
 ---
 
-<HeaderComponent />
-<div>
-  <p>Hello</p>
-  <h1>
-    I’m Jakub Serwin,<span>Frontend Developer</span>
-  </h1>
-  <h2>
-    I specialize in designing and creating scalable, beautiful websites to help
-    individuals and businesses grow.
-  </h2>
-  <button
-    class='landing-page__button'
-    data-target='#projects'
-    @click='polyfillScroll'
-  >
-    See My Work
-  </button>
-  <div class="flex gap-10">
-    {
-      services.map((service) => (
-        <ServiceCardComponent service={service} />
-      ))
-    }
+<div class='h-screen bg-[url("/bg.jpg")] bg-cover bg-no-repeat'>
+  <div class='container mx-auto flex h-full flex-col'>
+    <HeaderComponent />
+    <div class='grid flex-1 place-content-center text-center text-white'>
+      <h1 class='text-6xl'>Enhance Your Business</h1>
+      <h2 class='mt-4 mb-12 max-w-4xl text-2xl'>
+        I specialize in crafting stunning and scalable web and mobile solutions to
+        help individuals and businesses grow.
+      </h2>
+      <button
+        class='landing-page__button'
+        data-target='#projects'
+        @click='polyfillScroll'
+      >
+        See My Work
+      </button>
+    </div>
   </div>
 </div>
