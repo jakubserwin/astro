@@ -5,15 +5,32 @@ import { t } from 'i18next'
 import { HEADLINE_PREFIX, LINK_PREFIX } from 'public/locales'
 ---
 
-<div class='h-screen bg-[url("/bg.jpg")] bg-cover bg-no-repeat'>
-  <div class='container mx-auto flex h-full flex-col'>
+<div
+  class='overlay relative h-screen bg-[url("/bg.webp")] bg-cover bg-no-repeat'
+>
+  <div class='container relative z-10 mx-auto flex h-full flex-col'>
     <HeaderComponent />
-    <div class='flex flex-1 flex-col items-center justify-center text-center text-white'>
+    <div
+      class='flex flex-1 flex-col items-center justify-center text-center text-white'
+    >
       <h1 class='text-6xl font-bold'>{t(`${HEADLINE_PREFIX}.primary`)}</h1>
       <h2 class='mt-4 mb-12 max-w-4xl text-xl'>
         {t(`${HEADLINE_PREFIX}.primaryCaption`)}
       </h2>
-      <ButtonComponent label={t(`${LINK_PREFIX}.work`)} href="-"/>
+      <ButtonComponent label={t(`${LINK_PREFIX}.work`)} href='-' />
     </div>
   </div>
 </div>
+
+<style>
+  .overlay::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background:rgba(0,0,0,0.4);
+  }
+</style>
