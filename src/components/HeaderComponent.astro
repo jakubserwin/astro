@@ -1,5 +1,4 @@
 ---
-import { LINK_PREFIX } from '@locales'
 import { LanguageSelector } from 'astro-i18next/components'
 import { t } from 'i18next'
 ---
@@ -11,17 +10,17 @@ import { t } from 'i18next'
       <ul class='flex gap-4 font-light'>
         <li>
           <a class='cursor-pointer'>
-            {t(`${LINK_PREFIX}.home`)}
+            {t('link.home')}
           </a>
         </li>
         <li>
           <a class='cursor-pointer'>
-            {t(`${LINK_PREFIX}.projects`)}
+            {t('link.projects')}
           </a>
         </li>
         <li>
           <a class='cursor-pointer'>
-            {t(`${LINK_PREFIX}.contact`)}
+            {t('link.contact')}
           </a>
         </li>
       </ul>

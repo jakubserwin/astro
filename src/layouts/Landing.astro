@@ -1,7 +1,6 @@
 ---
 import ButtonComponent from '@components/ButtonComponent.astro'
 import HeaderComponent from '@components/HeaderComponent.astro'
-import { HEADLINE_PREFIX, LINK_PREFIX } from '@locales'
 import { t } from 'i18next'
 ---
 
@@ -13,11 +12,11 @@ import { t } from 'i18next'
     <div
       class='flex flex-1 flex-col items-center justify-center text-center text-white'
     >
-      <h1 class='text-4xl font-bold lg:text-6xl'>{t(`${HEADLINE_PREFIX}.primary`)}</h1>
+      <h1 class='text-4xl font-bold lg:text-6xl'>{t('headline.primary')}</h1>
       <h2 class='mt-4 mb-6 max-w-4xl text-base lg:mb-12 lg:text-xl'>
-        {t(`${HEADLINE_PREFIX}.primaryCaption`)}
+        {t('headline.primaryCaption')}
       </h2>
-      <ButtonComponent label={t(`${LINK_PREFIX}.work`)} href='-' />
+      <ButtonComponent label={t('link.work')} href='-' />
     </div>
   </div>
 </div>
