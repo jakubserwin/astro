@@ -8,7 +8,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "prettierTMP": "prettier -w --plugin-search-dir=. .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "generate": "astro-i18next generate"
   },
   "dependencies": {
     "@astrojs/netlify": "^2.1.3",
