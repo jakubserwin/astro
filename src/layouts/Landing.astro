@@ -8,9 +8,9 @@ import { HEADLINE_PREFIX, LINK_PREFIX } from 'public/locales'
 <div class='h-screen bg-[url("/bg.jpg")] bg-cover bg-no-repeat'>
   <div class='container mx-auto flex h-full flex-col'>
     <HeaderComponent />
-    <div class='grid flex-1 place-content-center text-center text-white'>
-      <h1 class='text-6xl'>{t(`${HEADLINE_PREFIX}.primary`)}</h1>
-      <h2 class='mt-4 mb-12 max-w-4xl text-2xl'>
+    <div class='flex flex-1 flex-col items-center justify-center text-center text-white'>
+      <h1 class='text-6xl font-bold'>{t(`${HEADLINE_PREFIX}.primary`)}</h1>
+      <h2 class='mt-4 mb-12 max-w-4xl text-xl'>
         {t(`${HEADLINE_PREFIX}.primaryCaption`)}
       </h2>
       <ButtonComponent label={t(`${LINK_PREFIX}.work`)} href="-"/>
