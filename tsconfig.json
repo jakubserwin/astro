@@ -6,6 +6,7 @@
       "@components/*": ["src/components/*"],
       "@types": ["src/types"],
       "@mocks": ["src/mocks"],
+      "@locales": ["src/locales"],
     }
   }
 }

@@ -1,13 +1,13 @@
 ---
+import { LINK_PREFIX } from '@locales'
 import { LanguageSelector } from 'astro-i18next/components'
 import { t } from 'i18next'
-import { LINK_PREFIX } from 'public/locales'
 ---
 
 <header class='flex items-center justify-between py-4'>
   <a class='text-xl font-medium text-white'>Jakub Serwin</a>
   <div class='flex items-center gap-6'>
-    <nav class='text-white'>
+    <nav class='hidden text-white lg:block'>
       <ul class='flex gap-4 font-light'>
         <li>
           <a class='cursor-pointer'>
