@@ -1,6 +1,6 @@
 ---
-import ButtonComponent from '@components/ButtonComponent.astro'
-import HeaderComponent from '@components/HeaderComponent.astro'
+// import ButtonComponent from '@components/ButtonComponent.astro'
+// import HeaderComponent from '@components/HeaderComponent.astro'
 import { t } from 'i18next'
 ---
 
@@ -8,7 +8,7 @@ import { t } from 'i18next'
   class='overlay relative h-screen bg-[url("/bg.webp")] bg-cover bg-no-repeat'
 >
   <div class='container relative z-10 mx-auto flex h-full flex-col px-6'>
-    <HeaderComponent />
+    <!-- <HeaderComponent /> -->
     <div
       class='flex flex-1 flex-col items-center justify-center text-center text-white'
     >
@@ -16,12 +16,12 @@ import { t } from 'i18next'
       <h2 class='mt-4 mb-6 max-w-4xl text-base lg:mb-12 lg:text-xl'>
         {t('headline.primaryCaption')}
       </h2>
-      <ButtonComponent label={t('link.work')} href='-' />
+      <!-- <ButtonComponent label={t('link.work')} href='-' /> -->
     </div>
   </div>
 </div>
 
-<style>
+<!-- <style>
   .overlay::after {
     content: '';
     position: absolute;
@@ -32,4 +32,4 @@ import { t } from 'i18next'
     z-index: 1;
     background:rgba(0,0,0,0.4);
   }
-</style>
+</style> -->

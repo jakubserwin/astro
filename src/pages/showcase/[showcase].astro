@@ -1,15 +1,15 @@
----
-import type { StaticPath } from '@types'
-import i18next, { changeLanguage } from 'i18next'
+<!-- ---
+import type { StaticPath } from "@types";
+import i18next, { changeLanguage } from "i18next";
 
-changeLanguage('en')
+changeLanguage("en");
 
 export const getStaticPaths = (): StaticPath[] => [
-  { params: { showcase: 'clifford' } },
-  { params: { showcase: 'rover' } },
-  { params: { showcase: 'spot' } },
-]
-const { showcase } = Astro.params
+    { params: { showcase: "clifford" } },
+    { params: { showcase: "rover" } },
+    { params: { showcase: "spot" } },
+];
+const { showcase } = Astro.params;
 ---
 
 <!DOCTYPE html>
@@ -24,4 +24,4 @@ const { showcase } = Astro.params
   <body>
     <div>{showcase}!</div>
   </body>
-</html>
+</html> -->
