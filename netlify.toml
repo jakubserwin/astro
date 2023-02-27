@@ -1,0 +1,2 @@
+[functions]
+  external_node_modules = ["i18next-fs-backend", "astro"]
