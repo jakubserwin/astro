@@ -6,6 +6,16 @@
       "@components/*": ["src/components/*"],
       "@types": ["src/types"],
       "@mocks": ["src/mocks"],
-    }
+    },
+    "target": "ESNext",
+    "module": "ESNext",
+    // Enable node-style module resolution, for things like npm package imports.
+    "moduleResolution": "node",
+    // Enable JSON imports.
+    "resolveJsonModule": true,
+    // Enable stricter transpilation for better output.
+    "isolatedModules": false,
+    // Add type definitions for our Vite runtime.
+    "types": ["vite/client"]
   }
 }
