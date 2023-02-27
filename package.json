@@ -18,7 +18,7 @@
     "astro-i18next": "1.0.0-beta.17",
     "astro-icon": "^0.8.0",
     "i18next": "^22.4.10",
-    "i18next-fs-backend": "^2.1.1",
+    "netlify-cli": "^13.0.0",
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {
@@ -34,6 +34,7 @@
     "eslint-plugin-tailwindcss": "^3.9.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.3",
+    "i18next-fs-backend": "^2.1.1",
     "prettier-plugin-astro": "^0.8.0"
   },
   "lint-staged": {
