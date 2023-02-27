@@ -1,5 +1,5 @@
 [functions]
-  external_node_modules = ["i18next-fs-backend", "astro", "tsm", "@proload/core"]
+  external_node_modules = ["i18next-fs-backend", "astro"]
 
 [build]
   command = "astro build"
