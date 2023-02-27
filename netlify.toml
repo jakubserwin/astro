@@ -1,2 +1,2 @@
 [functions]
-  external_node_modules = ["i18next-fs-backend"]
+  external_node_modules = ["i18next-fs-backend", "astro"]
