@@ -1,2 +1,7 @@
 [functions]
   external_node_modules = ["i18next-fs-backend", "astro", "tsm", "@proload/core"]
+
+[build]
+  command = "astro build"
+  publish = "dist"
+  functions = ".netlify/functions-internal"
