@@ -1,5 +1,6 @@
 ---
 import i18next, { changeLanguage } from 'i18next'
+import Landing from 'src/layouts/Landing.astro'
 
 changeLanguage('pl')
 ---
@@ -13,6 +14,6 @@ changeLanguage('pl')
     <title>{i18next.language}</title>
   </head>
   <body>
-    <!-- <LandingLayout /> -->
+    <Landing />
   </body>
 </html>

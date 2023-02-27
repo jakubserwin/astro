@@ -1,21 +1,22 @@
 ---
 // import ButtonComponent from '@components/ButtonComponent.astro'
 // import HeaderComponent from '@components/HeaderComponent.astro'
-// import { t } from 'i18next'
+import { t } from 'i18next'
 ---
 
 <!-- <div
   class='overlay relative h-screen bg-[url("/bg.webp")] bg-cover bg-no-repeat'
 > -->
+{t('headline.primaryCaption')}
   <div class='container relative z-10 mx-auto flex h-full flex-col px-6'>
     <!-- <HeaderComponent /> -->
     <div
       class='flex flex-1 flex-col items-center justify-center text-center text-white'
     >
       <!-- <h1 class='text-4xl font-bold lg:text-6xl'>{t('headline.primary')}</h1> -->
-      <!-- <h2 class='mt-4 mb-6 max-w-4xl text-base lg:mb-12 lg:text-xl'> -->
-        <!-- {t('headline.primaryCaption')} -->
-      <!-- </h2> -->
+      <!-- <h2 class='mt-4 mb-6 max-w-4xl text-base lg:mb-12 lg:text-xl'>
+        {t('headline.primaryCaption')}
+      </h2> -->
       <!-- <ButtonComponent label={t('link.work')} href='-' /> -->
     </div>
   </div>
