@@ -1,6 +1,6 @@
 ---
 import type { StaticPath } from '@types'
-import i18next, { changeLanguage, t } from 'i18next'
+import i18next, { changeLanguage } from 'i18next'
 
 changeLanguage('en')
 
@@ -22,6 +22,6 @@ const { showcase } = Astro.params
     <title>{i18next.language}</title>
   </head>
   <body>
-    <div>{t('hello')}, {showcase}!</div>
+    <div>{showcase}!</div>
   </body>
 </html>
