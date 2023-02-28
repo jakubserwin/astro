@@ -1,0 +1,12 @@
+---
+import ServiceCardComponent from '@components/ServiceCardComponent.astro'
+import { services } from '@mocks'
+---
+<div class="mt-20 flex flex-col items-center gap-16">
+  <h2 class="text-3xl text-neutral-800">Moje Usługi</h2>
+  <div class="flex flex-col items-center gap-12  lg:flex-row">
+    {services.map((service) => (
+        <ServiceCardComponent service={service} />
+    ))}
+  </div>
+</div>

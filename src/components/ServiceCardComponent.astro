@@ -1,4 +1,4 @@
-<!-- ---
+---
 import type { Service } from '@types'
 import { Icon } from 'astro-icon'
 
@@ -9,7 +9,7 @@ export interface Props {
 const { service } = Astro.props
 ---
 
-<div class='service-card flex flex-col items-center border border-red-500'>
+<div class='service-card flex flex-col items-center text-neutral-800'>
   <Icon name={service.icon.name} />
   <h3 class='mb-2 mt-3 text-xl font-medium'>
     {service.title}
@@ -27,6 +27,5 @@ const { service } = Astro.props
   [astro-icon] {
     width: 48px;
     height: 48px;
-    fill: blue;
   }
-</style> -->
+</style>
