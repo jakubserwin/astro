@@ -1,0 +1,72 @@
+---
+import { Icon } from 'astro-icon'
+---
+
+<div class='container mx-auto px-8'>
+  <div class='mt-20 flex flex-col items-center'>
+    <h2 class='mb-16 text-3xl text-neutral-800'>Moje Usługi</h2>
+    <form
+      action='#'
+      method='POST'
+      class='flex w-full flex-col gap-4 lg:max-w-2xl'
+    >
+      <div class='flex flex-col gap-4 lg:flex-row'>
+        <div class='flex flex-1 flex-col gap-1'>
+          <label for='name' class='block font-medium text-gray-700'>
+            Full Name
+          </label>
+          <input
+            type='text'
+            name='name'
+            id='name'
+            class='rounded-md border border-gray-300 p-2 text-neutral-800 focus:border-indigo-500'
+            placeholder='0.00'
+            required
+          />
+        </div>
+        <div class='flex flex-1 flex-col gap-1'>
+          <label for='email' class='block font-medium text-gray-700'
+            >Email</label
+          >
+          <input
+            type='email'
+            name='email'
+            id='email'
+            class='rounded-md border border-gray-300 p-2 text-neutral-800 focus:border-indigo-500'
+            placeholder='0.00'
+            required
+          />
+        </div>
+      </div>
+      <div class='flex flex-col gap-1'>
+        <label for='message' class='block font-medium text-gray-700'
+          >Wiadomość</label
+        >
+        <textarea
+          rows='5'
+          cols='33'
+          name='message'
+          id='message'
+          class='resize-none rounded-md border border-gray-300 p-2 text-neutral-800 focus:border-indigo-500'
+          placeholder='0.00'
+          required></textarea>
+      </div>
+      <input
+        type='submit'
+        value='Send'
+        class='cursor-pointer rounded-md bg-teal-400 py-2 font-medium'
+      />
+    </form>
+    <div class='mt-12 flex gap-4'>
+      <a href='https://github.com/jakubserwin' target='_blank'>
+        <Icon name='logo-github' class="h-9 w-9 fill-neutral-800" />
+      </a>
+      <a
+        href='https://www.linkedin.com/in/jakub-serwin-4a1539210/'
+        target='_blank'
+      >
+        <Icon name='linkedin' class="h-9 w-9 fill-neutral-800"/>
+      </a>
+    </div>
+  </div>
+</div>
