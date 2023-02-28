@@ -1,8 +1,5 @@
 ---
 import type { StaticPath } from '@types'
-import i18next, { changeLanguage } from 'i18next'
-
-changeLanguage('en')
 
 export const getStaticPaths = (): StaticPath[] => [
   { params: { showcase: 'clifford' } },
@@ -13,12 +10,12 @@ const { showcase } = Astro.params
 ---
 
 <!DOCTYPE html>
-<html lang={i18next.language}>
+<html lang="pl">
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
-    <title>{i18next.language}</title>
+    <title>Title</title>
   </head>
   <body>
     <div>{showcase}!</div>
