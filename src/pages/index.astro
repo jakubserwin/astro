@@ -1,17 +1,14 @@
 ---
-import i18next, { changeLanguage } from 'i18next'
 import Landing from 'src/layouts/Landing.astro'
-
-changeLanguage('en')
 ---
 
 <!DOCTYPE html>
-<html lang={i18next.language}>
+<html lang="pl">
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
-    <title>{i18next.language}</title>
+    <title>Title</title>
   </head>
   <body>
     <Landing />

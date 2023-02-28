@@ -1,32 +1,27 @@
-<!-- ---
-import { LanguageSelector } from 'astro-i18next/components'
-import { t } from 'i18next'
+---
 ---
 
-<header class='flex items-center justify-between py-4'>
-  <a class='text-xl font-medium text-white'>Jakub Serwin</a>
-  <div class='flex items-center gap-6'>
-    <nav class='hidden text-white lg:block'>
+<header class='flex items-center justify-between py-4 text-white'>
+  <a class='text-xl font-medium '>Jakub Serwin</a>
+    <nav class='hidden lg:block'>
       <ul class='flex gap-4 font-light'>
         <li>
           <a class='cursor-pointer'>
-            {t('link.home')}
+            Strona Główna
           </a>
         </li>
         <li>
           <a class='cursor-pointer'>
-            {t('link.projects')}
+            Projekty
           </a>
         </li>
         <li>
           <a class='cursor-pointer'>
-            {t('link.contact')}
+            Kontakt
           </a>
         </li>
       </ul>
     </nav>
-    <LanguageSelector showFlag={true} class='languages' />
-  </div>
 </header>
 
 <style>
@@ -36,4 +31,4 @@ import { t } from 'i18next'
     border-radius: 0.25rem;
     padding: 0.4em 0.6em;
   }
-</style> -->
+</style>
