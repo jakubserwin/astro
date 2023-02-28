@@ -6,25 +6,25 @@ export const services: Service[] = [
     icon: {
       name: 'design-icon',
     },
-    title: 'Design',
-    label: 'Clean, modern, and eye-catching designs that convert!',
+    title: 'Projektowanie',
+    label: 'Skuteczne i przyciągające wzrok projekty przekładające się na wyniki.',
   },
   {
     id: 2,
     icon: {
       name: 'programming-icon',
     },
-    title: 'Development',
-    label: 'Customized web development solutions to execute your ideas.',
+    title: 'Implementacja',
+    label: 'Dostosowane rozwiązania, które urzeczywistnią Twoje pomysły.',
   },
   {
     id: 3,
     icon: {
       name: 'responsive-icon',
     },
-    title: 'Responsive',
+    title: 'Responsywność',
     label:
-      'Responsive sites built for an optimal user experience across all devices.',
+      'Optymalne doświadczenia użytkownika na wszystkich urządzeniach.',
   },
 ]
 
