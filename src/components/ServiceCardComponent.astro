@@ -9,8 +9,8 @@ export interface Props {
 const { service } = Astro.props
 ---
 
-<div class='flex max-w-xs flex-col items-center text-neutral-800'>
-  <Icon name={service.icon.name} class="h-12 w-12" />
+<div class='flex max-w-xs flex-col items-center text-neutral-800 dark:text-white'>
+  <Icon name={service.icon.name} class="h-12 w-12 dark:fill-white" />
   <h3 class='mb-2 mt-3 text-xl font-medium'>
     {service.title}
   </h3>
