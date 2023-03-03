@@ -1,52 +1,77 @@
 ---
+import { Icon } from 'astro-icon'
 ---
+
 <script>
-  const button = document.querySelector('button.alert');
-  button.addEventListener('click', () => {
-    localStorage.theme = 'dark'
+  const checkbox: HTMLInputElement | null = document.querySelector('#checkbox')
+  checkbox?.addEventListener('change', () => {
+    if (checkbox.checked) {
+      localStorage.theme = 'dark'
+    } else {
+      localStorage.theme = 'light'
+    }
     if (
-        localStorage.theme === 'dark' ||
-        (!('theme' in localStorage) &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        document.documentElement.classList.add('dark')
-      } else {
-        document.documentElement.classList.remove('dark')
-      }
-  });
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  })
 </script>
 
 <header class='sticky top-0 flex items-center justify-between py-4 text-white'>
-  <a class='text-xl font-medium '>Jakub Serwin</a>
+  <a class='text-xl font-medium'>Jakub Serwin</a>
+  <div class='flex items-center gap-6'>
     <nav class='hidden lg:block'>
       <ul class='flex gap-4 font-light'>
         <li>
-          <a class='cursor-pointer'>
-            Strona Główna
-          </a>
+          <a class='cursor-pointer'> Strona Główna</a>
         </li>
         <li>
-          <a class='cursor-pointer'>
-            Projekty
-          </a>
+          <a class='cursor-pointer'> Projekty</a>
         </li>
         <li>
-          <a class='cursor-pointer'>
-            Kontakt
-          </a>
+          <a class='cursor-pointer'> Kontakt</a>
         </li>
       </ul>
     </nav>
-    <button class="alert">
-      Change Theme
-    </button>
+    <label class='relative inline-block h-5 w-11'>
+      <input type='checkbox' class='hidden h-0 w-0' id='checkbox' />
+      <span
+        class='slider absolute inset-0 flex cursor-pointer items-center justify-between rounded-2xl bg-gray-300'
+      >
+        <Icon name='sun' class='ml-1 h-4 w-4 fill-black' />
+        <Icon name='moon' class='mr-1 h-4 w-4' />
+      </span>
+    </label>
+  </div>
 </header>
 
 <style>
-  .languages {
-    appearance: none;
+  .slider {
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: '';
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 2px;
     background-color: white;
-    border-radius: 0.25rem;
-    padding: 0.4em 0.6em;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+
+  input:checked + .slider {
+    background-color: #9298a0;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px);
   }
 </style>
