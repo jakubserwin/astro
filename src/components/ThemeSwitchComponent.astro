@@ -1,0 +1,59 @@
+---
+import { Icon } from 'astro-icon'
+---
+
+<script>
+  const checkbox: HTMLInputElement | null = document.querySelector('#checkbox')
+  checkbox?.addEventListener('change', () => {
+    if (checkbox.checked) {
+      localStorage.theme = 'dark'
+    } else {
+      localStorage.theme = 'light'
+    }
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  })
+</script>
+
+<label class='relative inline-block h-5 w-11'>
+  <input type='checkbox' class='hidden h-0 w-0' id='checkbox' />
+  <span
+    class='slider absolute inset-0 flex cursor-pointer items-center justify-between rounded-2xl bg-gray-300'
+  >
+    <Icon name='sun' class='ml-1 h-4 w-4 fill-black' />
+    <Icon name='moon' class='mr-1 h-4 w-4' />
+  </span>
+</label>
+
+<style>
+  .slider {
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: '';
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+
+  input:checked + .slider {
+    background-color: #9298a0;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(20px);
+  }
+</style>
