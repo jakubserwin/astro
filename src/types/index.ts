@@ -15,3 +15,36 @@ export interface StaticPath {
     [key in string]: string
   };
 }
+
+interface ProjectDetails {
+  caption: string;
+  description: string;
+  problem: string;
+  timeline: string;
+  industry: string;
+  goals: string;
+  role1: string;
+  role2: string;
+  summary: string;
+}
+
+export interface Project {
+  id: number;
+  name: string;
+  // logo: string;
+  accentColor: string;
+  demo: string;
+  link: string;
+  repository: string;
+  details: ProjectDetails;
+}
+
+export enum ProjectCardVariant {
+  DEFAULT = 'DEFAULT',
+  FLIPPED = 'FLIPPED',
+}
+
+export enum ButtonVariant {
+  DEFAULT = 'DEFALUT',
+  OUTLINE = 'OUYLINE',
+}

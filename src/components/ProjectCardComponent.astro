@@ -1,0 +1,30 @@
+---
+import { ButtonVariant, ProjectCardVariant } from '@types'
+
+import ButtonComponent from './ButtonComponent.astro'
+
+export interface Props {
+  industry: string;
+  name: string;
+  caption: string;
+  accentColor: string;
+  variant: ProjectCardVariant;
+}
+
+const {
+  industry, name, caption, accentColor, variant,
+} = Astro.props
+---
+
+<div class={`flex items-center gap-16 ${variant === ProjectCardVariant.FLIPPED ? 'flex-row-reverse' : ''}`} >
+  <div class="flex-1">
+    <span class="font-medium uppercase tracking-widest" style={`color: ${accentColor}; font-size: 11px`}>{industry}</span>
+    <h2 class='mt-2 mb-4 text-5xl font-bold text-neutral-800 dark:text-white'>{name}</h2>
+    <span class="block h-1 w-24 rounded" style={`background: ${accentColor};`} />
+    <p class="mt-4 mb-6 max-w-md text-gray-400">{caption}</p>
+    <ButtonComponent label="Zobacz Case Study" href="#" variant={ButtonVariant.OUTLINE} color={accentColor} />
+  </div>
+  <div class="h-full flex-1 bg-teal-300">
+    <img src="./bg.webp" />
+  </div>
+</div>

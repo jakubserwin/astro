@@ -1,6 +1,7 @@
 ---
 import ButtonComponent from '@components/ButtonComponent.astro'
 import HeaderComponent from '@components/HeaderComponent.astro'
+import { ButtonVariant } from '@types'
 ---
 
 <div
@@ -16,7 +17,7 @@ import HeaderComponent from '@components/HeaderComponent.astro'
         Specjalizuję się w tworzeniu nowoczesnych i skalowalnych rozwiązań internetowych
         oraz mobilnych, które pomagają osobom indywidualnym i firmom w rozwoju.
       </h2>
-      <ButtonComponent label='Zobacz Moją Prace' href='-' />
+      <ButtonComponent label='Zobacz Moją Prace' href='-' variant={ButtonVariant.DEFAULT} />
     </div>
   </div>
 </div>
