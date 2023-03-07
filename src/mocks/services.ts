@@ -27,5 +27,3 @@ export const services: Service[] = [
       'Optymalne doświadczenia użytkownika na wszystkich urządzeniach.',
   },
 ]
-
-export interface Tmp {}

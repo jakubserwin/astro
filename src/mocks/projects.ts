@@ -105,5 +105,3 @@ export const projects: Project[] = [
     },
   },
 ]
-
-export interface TODO {}
