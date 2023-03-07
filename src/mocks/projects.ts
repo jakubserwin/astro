@@ -8,6 +8,7 @@ import type { Project } from '@types'
 export const projects: Project[] = [
   {
     name: 'Flow',
+    href: 'flow',
     accentColor: '#4F8A73',
     demo: 'https://www.youtube-nocookie.com/embed/6v-ICpb9rrc',
     link: 'https://resilient-salamander-db7dc3.netlify.app/',
@@ -31,6 +32,7 @@ export const projects: Project[] = [
   },
   {
     name: 'tarBUS Admin Panel',
+    href: 'tarbus',
     // logo: Tarbus,
     accentColor: '#34C7F7',
     demo: 'https://www.youtube-nocookie.com/embed/PPqOrbufu6E',
@@ -55,6 +57,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Adure Travel Website',
+    href: 'adure',
     // logo: Adure,
     accentColor: '#1CECA7',
     demo: 'https://www.youtube-nocookie.com/embed/WW5SLnCr7ts',
@@ -78,6 +81,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Hackathon Featured Project',
+    href: 'hackathon',
     // logo: Hackathon,
     accentColor: '#EE0889',
     demo: 'https://www.youtube-nocookie.com/embed/2fW17aXyzCw',

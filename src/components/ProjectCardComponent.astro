@@ -8,12 +8,15 @@ export interface Props {
   name: string;
   caption: string;
   accentColor: string;
+  href: string;
   variant: ProjectCardVariant;
 }
 
 const {
-  industry, name, caption, accentColor, variant,
+  industry, name, caption, accentColor, href, variant,
 } = Astro.props
+
+const link = `/showcase/${href}`
 ---
 
 <div class={`flex items-center gap-16 ${variant === ProjectCardVariant.FLIPPED ? 'flex-row-reverse' : ''}`} >
@@ -22,7 +25,7 @@ const {
     <h2 class='mt-2 mb-4 text-5xl font-bold text-neutral-800 dark:text-white'>{name}</h2>
     <span class="block h-1 w-24 rounded" style={`background: ${accentColor};`} />
     <p class="mt-4 mb-6 max-w-xl text-justify leading-[180%] text-gray-400 dark:text-gray-200">{caption}</p>
-    <ButtonComponent label="Zobacz Case Study" href="#" variant={ButtonVariant.OUTLINE} color={accentColor} />
+    <ButtonComponent label="Zobacz Case Study" href={link} variant={ButtonVariant.OUTLINE} color={accentColor} />
   </div>
   <div class="h-full flex-1 bg-teal-300">
     <img src="./bg.webp" />
