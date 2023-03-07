@@ -17,7 +17,6 @@ export interface StaticPath {
 }
 
 interface ProjectDetails {
-  caption: string;
   description: string;
   problem: string;
   timeline: string;
@@ -29,7 +28,6 @@ interface ProjectDetails {
 }
 
 export interface Project {
-  id: number;
   name: string;
   // logo: string;
   accentColor: string;
