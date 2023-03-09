@@ -20,17 +20,17 @@ export const projects: Project[] = [
       description:
         'Zarządzaj projektami zespołowymi lub stwórz osobisty system do zarządzania codziennymi zadaniami i problemami. Twórz tablice, zagnieżdżając w nich zadania i dostosuj je do swoich potrzeb, dodając opisy, etykiety lub terminy wykonania.',
       problem:
-        'Managing both large-scale commercial projects and small private resources is a challenge not only at the level of creating an effective system of processes and decisions, but also requires appropriate tools and technologies.',
+        'Zarządzanie organizacją pracy jest kluczowym elementem w różnego rodzaju przedsiębiorstwach. Polega na precyzyjnym określeniu zadań związanych z tworzeniem produktu końcowego, przydzielaniu ich odpowiednim pracownikom oraz ustalaniu terminów realizacji. Dzięki temu jakość końcowego produktu dostarczanego klientom zewnętrznym będzie na wyższym poziomie, a sam proces przebiegać będzie sprawniej i szybciej.',
       timeline: 'Oct - Dec 2022',
       industry: 'Project Management',
       goals:
-        'Flow helps users to achieve various goals and manage work. The software is designed for individual units and teams, regardless of their size.',
+        'Flow pozwala użytkownikom na realizację różnych przedsięwzięć i osiągnięcie wyznaczonych celów. System ten pomaga usystematyzować i zoptymalizować  proces zarządzania organizacją pracy. Klient ma możliwość samodzielnego konfigurowania systemu i warstw, dostosowując je do swoich wymagań.',
       role1:
-        'Market research and designing layouts in Figma. Setting up the project from scratch using the latest technologies and tools that help keep the code clean. Creating both frontend and backend architecture. Testing software by unit tests and end-to-end tests.',
+        'Badanie rynku i projektowanie layoutów w programie Figma. Setup projektu od podstaw, używając najnowszych technologii i narzędzi, które pomagają zachować czystość kodu. Tworzenie architektury zarówno frontendu, jak i backendu. Testowanie oprogramowania przy użyciu testów jednostkowych i testów end-to-end.',
       role2:
-        'Creating REST API using Express.js and MongoDB. Securing resources by user authentication with JWT Token. Deploying both client and server on Netlify using lambda functions.',
+        'Tworzenie REST API za pomocą Express.js i MongoDB. Zabezpieczenie zasobów serwera poprzez uwierzytelnianie użytkowników za pomocą tokena JWT. Deploy klienta i serwera na platformie Netlify za pomocą lambda functions.',
       summary:
-        "It was my first full stack project. I am really satisfied with the result and the architecture I've made, which separates business logic nicely using Pinia. I've learned a lot: setting up Vite, Cypress, TypeScript on both ends, Husky with ESLint + Stylelint, making connection with MongoDB, creating queries and lots of more.",
+        'Był to mój pierwszy projekt full stack. Jestem bardzo zadowolony z rezultatu i architektury, którą stworzyłem, separuje ona logikę biznesową od reszty przy użyciu Pinia. Nauczyłem się bardzo wiele: konfiguracji Vite, Cypress, TypeScript zarówno po stronie klienta jak i serwera, Husky wraz z ESLint + Stylelint, nawiązywania połączenia z MongoDB, tworzenia zapytań i wiele więcej.',
     },
   },
   {
@@ -47,17 +47,17 @@ export const projects: Project[] = [
       description:
         'To funkcjonalna platforma, która pozwala administratorom na zarządzanie trasami autobusowymi, odjazdami i liniami. Dostępne są również funkcje tworzenia nowych połączeń, dodawania rozkładów jazdy i wprowadzania nowych przystanków autobusowych.',
       problem:
-        'Staying updated with the schedule of the bus is a challenge. There was a need for a solution that allowed users to stay informed of the next bus arriving at their nearest bus stop to avoid getting late for work or school.',
+        'Bycie na bieżąco z rozkładem jazdy autobusów stanowi wyzwanie. Wymagało to stworzenia rozwiązania, które pozwoliłoby użytkownikom na śledzenie przyjazdu kolejnych autobusów na najbliższym przystanku, aby uniknąć spóźnienia do pracy lub szkoły.',
       timeline: 'June - Aug 2021',
       industry: 'Public transport',
       goals:
-        'Looking forward to expanding our services in other cities alongside launching new features to allow bus administrators to import the data in a single location.',
+        'Jesteśmy zainteresowani rozszerzeniem naszych usług na inne miasta, wraz z wprowadzeniem nowych funkcji umożliwiających administratorom autobusów zarządzanie danymi w jednym miejscu.',
       role1:
-        'Responsibilities involved creating layouts and efficient dynamic components. I also worked with data from database, and additional libraries.',
+        'Podczas pracy moimi głównymi obowiązkami było tworzenie layoutów oraz dynamicznych komponentów. Ponadto, miałem do czynienia z danymi pobieranymi z bazy danych, ich wyświetlaniem oraz modyfikowaniem.',
       role2:
-        'I collaborated with a friend and together we created collaborative environment to stay on the same page and be posted about the project’s progress.',
+        'Współpracowałem z przyjacielem, aby stworzyć środowisko, które pozwoliło nam na utrzymanie spójności w projekcie i na bieżąco informowało o jego postępach. Dzięki temu mogliśmy pracować na tych samych założeniach i uniknąć nieporozumień. Nasza współpraca pozwoliła nam zrealizować projekt zgodnie z oczekiwaniami i z zadowoleniem klienta.',
       summary:
-        'The Minimal Viable Product (MVP) was successfully launched and we are all set to focus on the final product by introducing new features desired by the client. Working on this project helped me improve my skills in vue and become better at layout designing. The collaboration made me realized the importance of clear and coherent communication.',
+        'Minimal Viable Product (MVP) został pomyślnie wypuszczony i jesteśmy gotowi skoncentrować się na produkcie końcowym poprzez wprowadzenie nowych funkcji, które są wymagane przez klienta. Praca nad tym projektem pomogła mi w poprawie moich umiejętności w Vue oraz w projektowaniu interfejsów. Współpraca pokazała mi jak ważna jest jasna i spójna komunikacja.',
     },
   },
   {
@@ -77,13 +77,13 @@ export const projects: Project[] = [
       timeline: '01-14 Aug 2021',
       industry: 'Travel',
       goals:
-        'Goals of this project were to put in practice my Vue and UI Design skills, work with new libraries and challenge myself with handling application state.',
+        'Celami projektu to praktyczne wykorzystanie moich umiejętności w zakresie Vue i projektowania interfejsu użytkownika, praca z nowymi bibliotekami oraz postawienie sobie wyzwania w zakresie zarządzania stanem aplikacji.',
       role1:
-        'Planning and wireframing website’s layout and core functionality. Designing components and layouts. Developing and testing.',
+        'Planowanie i tworzenie szkiców układu strony internetowej oraz jej funkcjonalności. Projektowanie komponentów i układów. Tworzenie i testowanie.',
       role2:
-        "Choosing appropriate libraries and implementing their functionalities e.g. 'PrimeVUE' for pictures slider and 'mdue' for material icons. ",
+        'Podczas projektowania aplikacji webowej ważnym elementem jest dobór odpowiednich bibliotek, które ułatwią tworzenie interfejsu użytkownika i zwiększą wydajność pracy. W tym konkretnym projekcie wykorzystano biblioteki `PrimeVUE` do stworzenia suwaka obrazów oraz `mdue` do dodania material icons. Dzięki temu projektowanie interfejsu użytkownika stało się prostsze, a aplikacja zyskała atrakcyjny wygląd oraz funkcjonalność, którą oferują te biblioteki.',
       summary:
-        "The project went pretty smoothly. Components are rendered dynamically based on locations data and the application state is manage by Vuex. In the future I may improve the transitions between different elements and store data outside client's side.",
+        'Projekt przebiegł dość sprawnie. Komponenty są renderowane dynamicznie na podstawie danych dotyczących lokalizacji, a stan aplikacji jest zarządzany przez Vuex. W przyszłości mogę poprawić przejścia między różnymi elementami oraz przechowywać dane poza stroną klienta.',
     },
   },
   {
@@ -100,17 +100,17 @@ export const projects: Project[] = [
       description:
         'Ankieta Obywatelska ma na celu zniwelować różnicę między aktualnymi trendami, a niezależnymi opiniami użytkowników. Oferuje szeroki wybór ankiet i petycji dotyczących różnorodnych problemów społecznych, stanowiąc centrum generowania i zbierania obiektywnych opinii użytkowników.',
       problem:
-        'The theme of this year\'s Hacknarök was "True Reality". Our team had to came up with an project idea which would match that topic.',
+        'Tematem tegorocznego Hacknaröku było "Prawdziwa rzeczywistość". Nasz zespół otrzymał zadanie wymyślenia pomysłu na projekt, który pasowałby do tego tematu.',
       timeline: '28-29 Mar 2021',
       industry: 'Public sector',
       goals:
-        'Create a place where users can express their opinion and compare it with the answers of others.',
+        'Stwórz miejsce, w którym użytkownicy będą mogli wyrażać swoją opinię i porównywać ją z odpowiedziami innych.',
       role1:
-        "Designing and working on the frontend side of the project. Since the time limit was only 24 hours I had to immediately code mockups and solutions I've created.",
+        'Byłem odpowiedzialny za projektowanie i rozwijanie frontendu projektu. Z krótkim terminem wykonania wynoszącym zaledwie 24 godziny, musiałem szybko przekształcić szablony i rozwiązania, które stworzyłem, w działający kod.',
       role2:
-        'Creating dynamic components with data received from backend side. Generating, modifying JSON objects and sending it to server.',
+        'W ramach moich obowiązków, otrzymałem zadanie stworzenia dynamicznych komponentów, które wyświetlały dane pobrane z serwera. Generowanie, modyfikowanie obiektów JSON i przesyłanie ich do serwera.',
       summary:
-        'Participating in hackathon was really fun and completely new experience for me. I had an opportunity to check if I am able to work on project for 24 hours straight. After submitting the project the jurors awarded prizes to 3 the best teams from 27 participating and I am happy to say that we were one of them.',
+        'Udział w hackathonie był dla mnie naprawdę przyjemnym i zupełnie nowym doświadczeniem. Miałem okazję sprawdzić, czy jestem w stanie pracować nad projektem przez 24 godziny bez przerwy. Po złożeniu projektu, jurorzy przyznali nagrody trzem najlepszym zespołom spośród 27 uczestniczących, i z radością mogę powiedzieć, że byliśmy jednym z nich.',
     },
   },
 ]
