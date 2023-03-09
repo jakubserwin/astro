@@ -1,6 +1,7 @@
 ---
 import HeaderComponent from '@components/HeaderComponent.astro'
 import ShowcaseItemComponent from '@components/ShowcaseItemComponent.astro'
+import { Icon } from 'astro-icon'
 import { getProject } from 'src/helpers/getProject'
 
 import Footer from './Footer.astro'
@@ -14,9 +15,11 @@ const { name } = Astro.props
 const project = getProject(name)
 ---
 { project
-&& <div class='container mx-auto px-8'>
-  <HeaderComponent />
-  <div class='mt-4 grid place-items-center rounded-xl py-12 md:py-16' style={`background: ${project.accentColor}`}>banner</div>
+&& <div class='mx-auto w-full px-8 sm:max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl'>
+  <HeaderComponent isShowcasePage={true}/>
+  <div class='mt-4 grid place-items-center rounded-xl py-12 md:py-16 lg:py-20' style={`background: ${project.accentColor}`}>
+    <Icon name={project.logo.name} class="h-12 w-12 dark:fill-white" />
+  </div>
   <div class='layout mt-8 grid grid-cols-1 gap-8 md:grid-cols-2'>
     <div class='flex flex-col md:col-span-2'>
       <span
@@ -50,7 +53,7 @@ const project = getProject(name)
     <ShowcaseItemComponent label={undefined} text={project.details.summary} />
   </div>
 </div>
-<Footer />
+<Footer isShowcasePage={true} />
 }
 <style>
   .layout {

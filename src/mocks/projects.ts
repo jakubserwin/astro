@@ -9,6 +9,9 @@ export const projects: Project[] = [
   {
     name: 'Flow',
     href: 'flow',
+    logo: {
+      name: 'flow',
+    },
     accentColor: '#4F8A73',
     demo: 'https://www.youtube-nocookie.com/embed/6v-ICpb9rrc',
     link: 'https://resilient-salamander-db7dc3.netlify.app/',
@@ -33,7 +36,9 @@ export const projects: Project[] = [
   {
     name: 'tarBUS Admin Panel',
     href: 'tarbus',
-    // logo: Tarbus,
+    logo: {
+      name: 'tarbus',
+    },
     accentColor: '#34C7F7',
     demo: 'https://www.youtube-nocookie.com/embed/PPqOrbufu6E',
     link: '',
@@ -58,7 +63,9 @@ export const projects: Project[] = [
   {
     name: 'Adure Travel Website',
     href: 'adure',
-    // logo: Adure,
+    logo: {
+      name: 'adure',
+    },
     accentColor: '#1CECA7',
     demo: 'https://www.youtube-nocookie.com/embed/WW5SLnCr7ts',
     link: 'https://keen-galileo-7becfc.netlify.app/',
@@ -82,7 +89,9 @@ export const projects: Project[] = [
   {
     name: 'Hackathon Featured Project',
     href: 'hackathon',
-    // logo: Hackathon,
+    logo: {
+      name: 'hackathon',
+    },
     accentColor: '#EE0889',
     demo: 'https://www.youtube-nocookie.com/embed/2fW17aXyzCw',
     link: 'https://devpost.com/software/sleipnjs-ankieta-wyborcza',

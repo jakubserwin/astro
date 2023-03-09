@@ -30,7 +30,7 @@ export interface ProjectDetails {
 export interface Project {
   name: string;
   href: string;
-  // logo: string;
+  logo: AstroIcon;
   accentColor: string;
   demo: string;
   link: string;
