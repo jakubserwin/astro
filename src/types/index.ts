@@ -16,7 +16,7 @@ export interface StaticPath {
   };
 }
 
-interface ProjectDetails {
+export interface ProjectDetails {
   description: string;
   problem: string;
   timeline: string;

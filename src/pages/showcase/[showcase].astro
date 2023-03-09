@@ -1,5 +1,6 @@
 ---
 import type { StaticPath } from '@types'
+import Showcase from 'src/layouts/Showcase.astro'
 
 export const getStaticPaths = (): StaticPath[] => [
   { params: { showcase: 'flow' } },
@@ -11,14 +12,14 @@ const { showcase } = Astro.params
 ---
 
 <!DOCTYPE html>
-<html lang="pl">
+<html lang='pl' class="scroll-smooth">
   <head>
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
     <title>Title</title>
   </head>
-  <body>
-    <div>{showcase}!</div>
+  <body class="dark:bg-neutral-900">
+    <Showcase name={showcase ?? ''}/>
   </body>
 </html>

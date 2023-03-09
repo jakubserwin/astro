@@ -1,0 +1,59 @@
+---
+import HeaderComponent from '@components/HeaderComponent.astro'
+import ShowcaseItemComponent from '@components/ShowcaseItemComponent.astro'
+import { getProject } from 'src/helpers/getProject'
+
+import Footer from './Footer.astro'
+
+export interface Props {
+  name: string;
+}
+
+const { name } = Astro.props
+
+const project = getProject(name)
+---
+{ project
+&& <div class='container mx-auto px-8'>
+  <HeaderComponent />
+  <div class='mt-4 grid place-items-center rounded-xl py-12 md:py-16' style={`background: ${project.accentColor}`}>banner</div>
+  <div class='layout mt-8 grid grid-cols-1 gap-8 md:grid-cols-2'>
+    <div class='flex flex-col md:col-span-2'>
+      <span
+        class='font-medium uppercase tracking-widest text-neutral-400'
+        style='font-size: 11px'>
+        Project
+      </span>
+      <h1 class='text-2xl font-bold text-neutral-800 dark:text-white md:text-3xl'>tarBUS Admin Panel</h1>
+    </div>
+    <ShowcaseItemComponent label='description' text={project.details.description} />
+    <div class="flex gap-8">
+      <ShowcaseItemComponent label='timeline' text={project.details.timeline} />
+      <ShowcaseItemComponent label='industry' text={project.details.industry} />
+    </div>
+    <ShowcaseItemComponent label='problem' text={project.details.problem} />
+    <ShowcaseItemComponent label='goals' text={project.details.goals} />
+  </div>
+  <span class="my-10 block w-full rounded bg-neutral-200 dark:bg-neutral-600" style="height: 1px;" />
+  <div class="flex flex-col gap-10">
+    <h2 class='text-2xl font-bold  text-neutral-800 dark:text-white md:text-3xl'>My Role</h2>
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+      <ShowcaseItemComponent label={undefined} text={project.details.role1} />
+      <ShowcaseItemComponent label={undefined} text={project.details.role2} />
+    </div>
+  </div>
+  <span class="my-10 block w-full rounded bg-neutral-200 dark:bg-neutral-600" style="height: 1px;" />
+  Showcase
+  <span class="my-10 block w-full rounded bg-neutral-200 dark:bg-neutral-600" style="height: 1px;" />
+  <div class="flex flex-col gap-10">
+    <h2 class='text-2xl font-bold  text-neutral-800 dark:text-white md:text-3xl'>Summary</h2>
+    <ShowcaseItemComponent label={undefined} text={project.details.summary} />
+  </div>
+</div>
+<Footer />
+}
+<style>
+  .layout {
+    grid-template-rows: repeat(3, max-content);
+  }
+</style>
