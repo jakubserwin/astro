@@ -26,7 +26,7 @@ const { url, link, repository } = Astro.props
       <div class='mt-8 flex justify-center gap-6'>
         {link && (
           <a
-            class='cursor-pointer rounded-lg border border-neutral-800 px-6 py-3 text-sm font-medium text-neutral-800 duration-300 hover:bg-neutral-800 hover:text-white dark:border-white dark:text-white'
+            class='cursor-pointer rounded-lg border border-neutral-800 px-6 py-3 text-center text-sm font-medium text-neutral-800 duration-300 hover:bg-neutral-800 hover:text-white dark:border-white dark:text-white'
             href={link}
             target="_blank"
           >
@@ -35,7 +35,7 @@ const { url, link, repository } = Astro.props
         )}
         {repository && (
           <a
-            class='cursor-pointer rounded-lg border border-neutral-800 px-6 py-3 text-sm font-medium text-neutral-800 duration-300 hover:bg-neutral-800 hover:text-white dark:border-white dark:text-white'
+            class='cursor-pointer rounded-lg border border-neutral-800 px-6 py-3 text-center text-sm font-medium text-neutral-800 duration-300 hover:bg-neutral-800 hover:text-white dark:border-white dark:text-white'
             href={repository}
             target="_blank"
           >
