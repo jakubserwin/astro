@@ -1,5 +1,6 @@
 ---
 import { ButtonVariant, ProjectCardVariant } from '@types'
+import { Icon } from 'astro-icon'
 
 import ButtonComponent from './ButtonComponent.astro'
 
@@ -19,15 +20,61 @@ const {
 const link = `/showcase/${href}`
 ---
 
-<div class={`flex items-center gap-16 ${variant === ProjectCardVariant.FLIPPED ? 'flex-row-reverse' : ''}`} >
-  <div class="flex-1">
-    <span class="font-medium uppercase tracking-widest" style={`color: ${accentColor}; font-size: 11px`}>{industry}</span>
-    <h2 class='mt-2 mb-4 text-5xl font-bold text-neutral-800 dark:text-white'>{name}</h2>
-    <span class="block h-1 w-24 rounded" style={`background: ${accentColor};`} />
-    <p class="mt-4 mb-6 max-w-xl text-justify leading-[180%] text-gray-400 dark:text-gray-200">{caption}</p>
-  <ButtonComponent label="Zobacz Case Study" href={link} variant={ButtonVariant.OUTLINE} color={accentColor} />
+<div
+  class={`flex flex-col gap-16 lg:flex-row lg:items-center ${
+    variant === ProjectCardVariant.FLIPPED ? 'lg:flex-row-reverse' : ''
+  }`}
+>
+  <div class='flex-1'>
+    <span
+      class='font-medium uppercase tracking-widest'
+      style={`color: ${accentColor}; font-size: 11px`}>{industry}</span
+    >
+    <h2 class='mt-2 mb-4 text-5xl font-bold text-neutral-800 dark:text-white'>
+      {name}
+    </h2>
+    <span class='block h-1 w-24 rounded' style={`background: ${accentColor};`}
+    ></span>
+    <p
+      class='mt-4 mb-6 max-w-xl text-justify leading-[180%] text-gray-400 dark:text-gray-200'
+    >
+      {caption}
+    </p>
+    <ButtonComponent
+      label='Zobacz Case Study'
+      href={link}
+      variant={ButtonVariant.OUTLINE}
+      color={accentColor}
+    />
   </div>
-  <div class="h-full flex-1 overflow-hidden rounded-md shadow-xl">
-    <img src={`./${href}.jpeg`} />
+  <div class='relative h-full flex-1'>
+    <div class='relative z-10 overflow-hidden shadow-xl'>
+      <img
+        src={`./${href}.jpeg`}
+        class={href === 'flow' ? 'rounded-md border' : 'rounded-md'}
+      />
+    </div>
+    {
+      href === 'flow' && (
+        <>
+          <Icon
+            name='blob-top'
+            class='absolute -top-20 -right-20 z-20 hidden h-40 w-40 xl:block'
+          />
+          <Icon
+            name='blob-bottom'
+            class='absolute -bottom-16 -left-16 z-0 hidden h-40 w-40 rotate-180 xl:block'
+          />
+        </>
+      )
+    }
+    {
+      href === 'hackathon' && (
+        <Icon
+          name='blob'
+          class='absolute -bottom-16 -left-16 z-0 hidden h-40 w-40 rotate-180 xl:block'
+        />
+      )
+    }
   </div>
 </div>
