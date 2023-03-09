@@ -10,12 +10,6 @@ export interface Service {
   label: string;
 }
 
-export interface StaticPath {
-  params: {
-    [key in string]: string
-  };
-}
-
 export interface ProjectDetails {
   description: string;
   problem: string;

@@ -1,13 +1,6 @@
 ---
-import type { StaticPath } from '@types'
 import Showcase from 'src/layouts/Showcase.astro'
 
-export const getStaticPaths = (): StaticPath[] => [
-  { params: { showcase: 'flow' } },
-  { params: { showcase: 'tarbus' } },
-  { params: { showcase: 'adure' } },
-  { params: { showcase: 'hackathon' } },
-]
 const { showcase } = Astro.params
 ---
 
