@@ -1,0 +1,54 @@
+---
+export interface Props {
+  url: string;
+  link: string;
+  repository: string;
+}
+
+const { url, link, repository } = Astro.props
+---
+
+<div>
+  <h2 class='text-2xl font-bold text-neutral-800 dark:text-white md:text-3xl'>
+    Project Showcase
+  </h2>
+  <div class='iframe-padding relative mt-10 h-0 overflow-hidden rounded-lg'>
+    <iframe
+      class='absolute inset-0 h-full w-full'
+      src={url}
+      title='YouTube video player'
+      frameborder='0'
+      allow='accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture'
+      allowfullscreen></iframe>
+  </div>
+  {
+    (link || repository) && (
+      <div class='mt-8 flex justify-center gap-6'>
+        {link && (
+          <a
+            class='cursor-pointer rounded-lg border border-neutral-800 px-6 py-3 text-sm font-medium text-neutral-800 duration-300 hover:bg-neutral-800 hover:text-white dark:border-white dark:text-white'
+            href={link}
+            target="_blank"
+          >
+            Odwiedź Stronę
+          </a>
+        )}
+        {repository && (
+          <a
+            class='cursor-pointer rounded-lg border border-neutral-800 px-6 py-3 text-sm font-medium text-neutral-800 duration-300 hover:bg-neutral-800 hover:text-white dark:border-white dark:text-white'
+            href={repository}
+            target="_blank"
+          >
+            Zobacz Kod Źródłowy
+          </a>
+        )}
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .iframe-padding {
+    padding-bottom: 56.25%;
+  }
+</style>
