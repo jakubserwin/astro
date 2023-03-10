@@ -35,7 +35,7 @@ export const projects: Project[] = [
   },
   {
     name: 'tarBUS Admin Panel',
-    href: 'adure',
+    href: 'tarbus',
     logo: {
       name: 'tarbus',
     },
