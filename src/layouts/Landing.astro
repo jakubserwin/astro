@@ -1,37 +1,35 @@
 ---
 import ButtonComponent from '@components/ButtonComponent.astro'
 import HeaderComponent from '@components/HeaderComponent.astro'
+import HeroComponent from '@components/HeroComponent.astro'
 import { ButtonVariant } from '@types'
+import Services from 'src/layouts/Services.astro'
 ---
 
-<div
-  class='overlay relative h-screen bg-[url("/bg.webp")] bg-cover bg-no-repeat'
->
+<div class='h-screen'>
   <div class='container relative z-10 mx-auto flex h-full flex-col px-8'>
-    <HeaderComponent />
-    <div
-      class='flex flex-1 flex-col items-center justify-center text-center text-white'
-    >
-      <h1 class='text-6xl font-bold'>Enhance Your Business</h1>
-      <h2 class='mt-4 mb-6 max-w-4xl text-base lg:mb-12 lg:text-xl'>
-        Specjalizuję się w tworzeniu nowoczesnych i skalowalnych rozwiązań internetowych
-        oraz mobilnych, które pomagają osobom indywidualnym i firmom w rozwoju.
-      </h2>
-      <ButtonComponent label='Zobacz Moją Prace' href='#projects' variant={ButtonVariant.DEFAULT} />
+    <HeaderComponent isDarkMode={true} />
+    <div class='mt-20 flex items-center gap-12'>
+      <div
+        class='flex flex-1 flex-col items-start text-neutral-800 dark:text-white'
+      >
+        <h1 class='text-5xl font-bold'>Enhance Your Business</h1>
+        <h2 class='mt-4 mb-6 max-w-4xl text-base lg:text-lg'>
+          Specjalizuję się w tworzeniu nowoczesnych i skalowalnych rozwiązań
+          internetowych oraz mobilnych, które pomagają osobom indywidualnym i
+          firmom w rozwoju.
+        </h2>
+        <ButtonComponent
+          label='Zobacz Moją Prace'
+          href='#projects'
+          variant={ButtonVariant.DEFAULT}
+        />
+      </div>
+      <div class='flex-1 text-white'>
+        <HeroComponent />
+      </div>
     </div>
+    <span id='services'></span>
+    <Services />
   </div>
 </div>
-<span id="services" />
-
-<style>
-  .overlay::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background:rgba(0,0,0,0.4);
-  }
-</style>

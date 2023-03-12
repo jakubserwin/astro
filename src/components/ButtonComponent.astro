@@ -12,12 +12,11 @@ const {
   label, href, variant, color,
 } = Astro.props
 ---
-
 {
   variant === ButtonVariant.DEFAULT ? (
     <a
-      class='flex cursor-pointer justify-center
-        self-center rounded-md bg-slate-50 px-6 py-2 text-sm font-medium text-black'
+      class='bg-slide flex cursor-pointer justify-center rounded-md px-6
+        py-3 text-sm font-medium text-white'
       href={href}
     >
       {label}
@@ -33,3 +32,15 @@ const {
     </a>
   )
 }
+
+<style>
+  .bg-slide {
+    background: linear-gradient(to right, #06bfff 50%, #2b74ff 100%) right 0 /
+      200%;
+    transition: background-position 300ms ease-in;
+  }
+
+  .bg-slide:hover {
+    background-position: left 0;
+  }
+</style>

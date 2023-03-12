@@ -2,12 +2,12 @@
 import ThemeSwitchComponent from './ThemeSwitchComponent.astro'
 
 export interface Props {
-  isShowcasePage?: boolean;
+  isDarkMode?: boolean;
 }
 
-const { isShowcasePage } = Astro.props
+const { isDarkMode } = Astro.props
 ---
-<header class={`flex items-center justify-between py-4 ${isShowcasePage ? 'text-neutral-800 dark:text-white' : 'text-white'}`}>
+<header class={`flex items-center justify-between py-4 ${isDarkMode ? 'text-neutral-800 dark:text-white' : 'text-white'}`}>
   <a class='text-xl font-medium' href="/">Jakub Serwin</a>
   <div class='flex items-center gap-6'>
     <nav class='hidden lg:block'>
