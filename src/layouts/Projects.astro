@@ -4,9 +4,9 @@ import { projects } from '@mocks'
 import { ProjectCardVariant } from '@types'
 ---
 
-<div class='container mx-auto mt-28 flex flex-col items-center gap-16 px-8'>
+<div class='container mx-auto mt-28 flex flex-col items-center gap-16 px-8 lg:mt-0 2xl:mt-72 '>
   <h2 class='text-3xl text-neutral-800 dark:text-white'>Wykonane Projekty</h2>
-  <div class="flex w-full flex-col gap-28 lg:gap-20">
+  <div class="flex w-full flex-col gap-28 lg:gap-20 2xl:gap-40">
     {projects.map(({
       name, href, accentColor, details,
     }, index) => (

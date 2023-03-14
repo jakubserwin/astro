@@ -6,15 +6,15 @@ import { ButtonVariant } from '@types'
 import Services from 'src/layouts/Services.astro'
 ---
 
-<div class='h-screen'>
+<div class='min-h-screen 2xl:min-h-0'>
   <div class='container relative z-10 mx-auto flex h-full flex-col px-8'>
     <HeaderComponent isDarkMode={true} />
-    <div class='mt-20 flex items-center gap-12'>
+    <div class='mt-12 flex items-center gap-12 md:mt-20 lg:mt-16 2xl:mt-28'>
       <div
-        class='flex flex-1 flex-col items-start text-neutral-800 dark:text-white'
+        class='flex flex-1 flex-col items-center text-neutral-800 dark:text-white lg:items-start'
       >
-        <h1 class='text-5xl font-bold'>Enhance Your Business</h1>
-        <h2 class='mt-4 mb-6 max-w-4xl text-base lg:text-lg'>
+        <h1 class='text-center text-5xl font-bold lg:text-left'>Enhance Your Business</h1>
+        <h2 class='mt-4 mb-6 max-w-4xl text-center text-base lg:text-left lg:text-lg'>
           Specjalizuję się w tworzeniu nowoczesnych i skalowalnych rozwiązań
           internetowych oraz mobilnych, które pomagają osobom indywidualnym i
           firmom w rozwoju.
@@ -25,7 +25,7 @@ import Services from 'src/layouts/Services.astro'
           variant={ButtonVariant.DEFAULT}
         />
       </div>
-      <div class='flex-1 text-white'>
+      <div class='hidden flex-1 text-white lg:block'>
         <HeroComponent />
       </div>
     </div>
