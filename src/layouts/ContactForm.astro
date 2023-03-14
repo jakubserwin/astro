@@ -67,7 +67,7 @@ import { Icon } from 'astro-icon'
       <input
         type='submit'
         value='Wyślij'
-        class='cursor-pointer rounded-md bg-cyan-400 py-2 font-medium text-white duration-300 hover:bg-cyan-500'
+        class='bg-slide cursor-pointer rounded-md py-2 font-medium text-white'
       />
     </form>
     <div class='mt-12 flex gap-4'>
@@ -89,3 +89,15 @@ import { Icon } from 'astro-icon'
     </div>
   </div>
 </div>
+
+<style>
+  .bg-slide {
+    background: linear-gradient(to right, #06bfff 50%, #2b74ff 100%) right 0 /
+      200%;
+    transition: background-position 300ms ease-in;
+  }
+
+  .bg-slide:hover {
+    background-position: left 0;
+  }
+</style>
